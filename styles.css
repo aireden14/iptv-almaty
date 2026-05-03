@@ -353,13 +353,7 @@ section {
   }
 
   .header-btn {
-    padding: 6px 10px !important;
-    font-size: 0.75rem !important;
-    border-radius: 10px !important;
-    flex-shrink: 0;
-    margin-left: 10px;
-    background: #8b5cf6 !important; /* Более выраженный фиолетовый */
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+    display: none !important;
   }
   
   .hero {
