@@ -158,23 +158,27 @@ p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); }
 
 header {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 40px);
+  width: calc(100% - 30px);
   max-width: 1100px;
   z-index: 1000;
-  padding: 12px 24px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .logo {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-main);
   text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
@@ -331,11 +335,17 @@ section {
   
   header {
     top: 10px;
-    padding: 10px 16px;
+    padding: 8px 16px;
+    width: calc(100% - 20px);
   }
-  
-  .nav-links {
-    display: none;
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .header-btn {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
   }
   
   .hero {
