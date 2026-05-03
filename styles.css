@@ -335,19 +335,29 @@ section {
   
   header {
     top: 10px;
-    padding: 6px 12px;
-    width: 94%;
+    padding: 6px 15px;
+    width: 92%;
     max-width: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
   }
 
   .logo {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
   }
 
   .header-btn {
-    padding: 6px 12px !important;
-    font-size: 0.8rem !important;
-    border-radius: 12px !important;
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+    border-radius: 14px !important;
+    flex-shrink: 0;
+    margin-left: 10px;
   }
   
   .hero {
