@@ -82,4 +82,31 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.background = 'rgba(255, 255, 255, 0.7)';
         }
     });
+
+    // Copy Phone Number
+    const copyBtn = document.getElementById('copyPhone');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const phoneNumber = '+77072186014';
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                const icon = copyBtn.querySelector('i');
+                icon.className = 'fas fa-check';
+                copyBtn.style.background = '#25d366';
+                copyBtn.style.color = 'white';
+                
+                setTimeout(() => {
+                    icon.className = 'far fa-copy';
+                    copyBtn.style.background = 'rgba(99, 102, 241, 0.1)';
+                    copyBtn.style.color = 'var(--primary)';
+                }, 2000);
+            });
+        });
+    }
+
+    // Carousel Infinite Loop Adjustment
+    const track = document.getElementById('testimonialCarousel');
+    if (track) {
+        track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+        track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
+    }
 });

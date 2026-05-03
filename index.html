@@ -7,6 +7,35 @@
     <meta name="description" content="Профессиональная настройка IPTV на Smart TV (Samsung, LG, Sony), Android TV Box. 1000+ каналов в HD и 4K. Установка за 15 минут в Астане и дистанционно по всему Казахстану. Александр: +7 707 218 60 14">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "Настройка IPTV в Астане и Казахстане",
+      "serviceType": "IPTV Installation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "IPTV PRO Астана",
+        "telephone": "+77072186014",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Astana",
+          "addressCountry": "KZ"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "KZT",
+        "price": "2500",
+        "priceValidUntil": "2024-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      }
+    }
+    </script>
 </head>
 <body>
     <div class="bg-aurora"></div>
@@ -32,10 +61,23 @@
                     <a href="https://wa.me/77072186014?text=Здравствуйте!%20Хочу%20подключить%20IPTV" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 1.2rem;"></i> Подключить через WhatsApp
                     </a>
-                    <a href="tel:+77072186014" class="btn btn-ghost glass" style="border: 1px solid rgba(0,0,0,0.1);">
-                        <i class="fas fa-phone" style="margin-right: 10px;"></i> +7 707 218 60 14
-                    </a>
+                    <div style="display: flex; align-items: center;">
+                        <a href="tel:+77072186014" class="btn btn-ghost glass" style="border: 1px solid rgba(0,0,0,0.1); margin-bottom: 0;">
+                            <i class="fas fa-phone" style="margin-right: 10px;"></i> +7 707 218 60 14
+                        </a>
+                        <button class="copy-btn" id="copyPhone" title="Скопировать номер"><i class="far fa-copy"></i></button>
+                    </div>
                 </div>
+            </div>
+
+            <div class="categories-container container">
+                <div class="category-tag"><span>⚽️</span> Спорт</div>
+                <div class="category-tag"><span>🎬</span> Кино</div>
+                <div class="category-tag"><span>🧸</span> Детские</div>
+                <div class="category-tag"><span>🌍</span> Весь мир</div>
+                <div class="category-tag"><span>🎭</span> Сериалы</div>
+                <div class="category-tag"><span>🔞</span> 18+</div>
+                <div class="category-tag"><span>📰</span> Новости</div>
             </div>
 
             <div class="hero-image-container">
@@ -50,7 +92,49 @@
             </div>
         </section>
 
-        <section id="features" class="container">
+        <section id="how-it-works" class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="text-gradient">Как мы работаем?</h2>
+                <p>Простой процесс подключения за 3 шага</p>
+            </div>
+            <div class="steps-container">
+                <div class="glass-card step-item">
+                    <div class="step-number">1</div>
+                    <h3>Оставьте заявку</h3>
+                    <p>Напишите нам в WhatsApp или позвоните. Мы уточним модель вашего ТВ.</p>
+                </div>
+                <div class="glass-card step-item">
+                    <div class="step-number">2</div>
+                    <h3>Настройка</h3>
+                    <p>Мы поможем установить приложение и пришлем все необходимые данные для входа.</p>
+                </div>
+                <div class="glass-card step-item">
+                    <div class="step-number">3</div>
+                    <h3>Смотрите ТВ</h3>
+                    <p>Проверяете качество и стабильность, после чего наслаждаетесь просмотром.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container" style="text-align: center; margin-bottom: 40px;">
+                <h2 class="text-gradient">Отзывы наших клиентов</h2>
+                <p>Что говорят люди, которые уже подключили IPTV</p>
+            </div>
+            <div class="carousel-track" id="testimonialCarousel">
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_1.png" alt="Отзыв 1"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_2.png" alt="Отзыв 2"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_3.png" alt="Отзыв 3"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_4.png" alt="Отзыв 4"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_5.png" alt="Отзыв 5"></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_1.png" alt="Отзыв 1"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_2.png" alt="Отзыв 2"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_3.png" alt="Отзыв 3"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_4.png" alt="Отзыв 4"></div>
+                <div class="testimonial-card"><img src="assets/whatsapp_chat_5.png" alt="Отзыв 5"></div>
+            </div>
+        </section>
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2 class="text-gradient">Почему выбирают нас?</h2>
                 <p>Мы предлагаем стабильный сервис с максимальным набором функций</p>

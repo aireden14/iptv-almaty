@@ -357,27 +357,116 @@ section {
   }
   
   .hero {
-    padding-top: 140px;
-  }
-  
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .pricing-card.featured {
-    transform: scale(1);
-    margin: 20px 0;
-  }
-
-  .btn {
-    width: 100%;
-    margin-bottom: 12px;
-  }
-  
-  .hero-image-container img {
-    border-radius: 20px;
+    padding-top: 120px;
   }
 }
+
+/* Categories Scroll */
+.categories-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.categories-container::-webkit-scrollbar { display: none; }
+
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 100px;
+  margin-right: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.category-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.category-tag span { margin-right: 8px; font-size: 1.2rem; }
+
+/* Steps Section */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+.step-item {
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 20px var(--primary-glow);
+}
+
+/* Testimonials Carousel */
+.testimonials-section {
+  overflow: hidden;
+  padding: 80px 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+.testimonial-card {
+  width: 300px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 4px solid white;
+}
+.testimonial-card img {
+  width: 100%;
+  display: block;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Copy Button */
+.copy-btn {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+.copy-btn:hover { background: var(--primary); color: white; }
+.copy-btn:active { transform: scale(0.9); }
 
 /* Floating WhatsApp Button for Mobile */
 .floating-cta {
